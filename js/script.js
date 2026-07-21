@@ -1,5 +1,7 @@
 /* AYORA — small progressive enhancements only */
 (() => {
+  // Configure apenas os dígitos, incluindo país e DDD. Ex.: 5511999999999
+  const WHATSAPP_NUMBER = '';
   const header = document.querySelector('[data-header]');
   const menuToggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-menu]');
@@ -20,6 +22,9 @@
     });
 
     menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
   }
 
   const form = document.querySelector('[data-memory-form]');
@@ -32,8 +37,26 @@
         feedback.textContent = 'Complete os campos indicados para continuar.';
         return;
       }
-      const memoryName = document.querySelector('#memory-name').value.trim();
-      feedback.textContent = `“${memoryName}” já começou a ganhar forma. Conecte este formulário ao seu canal de atendimento para concluir o pedido.`;
+      if (!WHATSAPP_NUMBER) {
+        feedback.textContent = 'Antes de publicar, informe o número de WhatsApp em js/script.js para ativar o envio do pedido.';
+        return;
+      }
+
+      const values = new FormData(form);
+      const message = [
+        'Olá! Gostaria de personalizar uma obra AYORA.',
+        '',
+        `Memória: ${values.get('memory-name')}`,
+        `Formato: ${values.get('format')}`,
+        `Data: ${values.get('memory-date')}`,
+        `Horário: ${values.get('memory-time')}`,
+        `Local: ${values.get('memory-place')}`,
+        values.get('memory-message') ? `Mensagem: ${values.get('memory-message')}` : '',
+      ].filter(Boolean).join('\n');
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+      feedback.textContent = 'Abrimos o WhatsApp para continuar sua personalização.';
     });
   }
 

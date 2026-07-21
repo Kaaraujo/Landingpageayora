@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#153a2b" />
+    <meta name="theme-color" content="#33423b" />
     <meta name="description" content="AYORA transforma o céu de um instante especial em uma obra de arte personalizada, elegante e atemporal." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="./" />
-    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon/favicon.jpg" type="image/jpeg" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="AYORA — Arte para Memórias" />
     <meta property="og:description" content="Transformamos o céu de um instante especial em uma obra de arte elegante e atemporal." />
-    <meta property="og:image" content="assets/logos/ayora-logo-light.jpg" />
+    <meta property="og:image" content="assets/images/colecao-mapas.png" />
     <meta property="og:site_name" content="AYORA" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="AYORA — Arte para Memórias" />
     <meta name="twitter:description" content="O céu de um instante especial, preservado em arte." />
 
     <title>AYORA — Arte para Memórias</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
@@ -28,8 +29,7 @@
     <header class="site-header" data-header>
       <div class="container header__inner">
         <a class="brand" href="#inicio" aria-label="AYORA — voltar ao início">
-          <span class="brand__mark" aria-hidden="true"><i></i></span>
-          <span class="brand__name">AYORA</span>
+          <img class="brand__logo" src="assets/logos/logo-principal.jpg" alt="" width="160" height="48" />
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
@@ -62,26 +62,12 @@
             </div>
           </div>
 
-          <div class="hero__art reveal" aria-label="Exemplo ilustrativo de mapa estelar AYORA">
-            <div class="artwork artwork--hero">
-              <div class="artwork__topline">AYORA · ARTE PARA MEMÓRIAS</div>
-              <div class="star-map" aria-hidden="true">
-                <svg viewBox="0 0 430 430" role="presentation">
-                  <circle cx="215" cy="215" r="178" fill="none" stroke="currentColor" stroke-width=".8" opacity=".38" />
-                  <circle cx="215" cy="215" r="128" fill="none" stroke="currentColor" stroke-width=".6" opacity=".2" />
-                  <path d="M73 268 138 171 214 222 299 132 357 239M102 117l112 105 104-85 41 102M91 285l93-18 113 76 60-104" fill="none" stroke="currentColor" stroke-width=".75" opacity=".58" />
-                  <g fill="currentColor"><circle cx="73" cy="268" r="3"/><circle cx="138" cy="171" r="2.4"/><circle cx="214" cy="222" r="4"/><circle cx="299" cy="132" r="2.5"/><circle cx="357" cy="239" r="3.2"/><circle cx="102" cy="117" r="2"/><circle cx="318" cy="137" r="2"/><circle cx="91" cy="285" r="2.2"/><circle cx="184" cy="267" r="2.8"/><circle cx="297" cy="343" r="2.1"/><circle cx="357" cy="94" r="1.7"/></g>
-                </svg>
-              </div>
-              <div class="artwork__copy">
-                <span>O céu de um momento</span>
-                <strong>PARA SEMPRE</strong>
-                <small>Uma memória, em uma data e lugar únicos.</small>
-              </div>
-              <span class="artwork__seal" aria-hidden="true">✦</span>
+          <figure class="hero__art reveal">
+            <div class="hero__image-frame">
+              <img src="assets/images/mapa-estelar-claro.png" alt="Mapa estelar AYORA em tons claros, com constelações e informações de uma data especial" width="1055" height="1493" fetchpriority="high" />
             </div>
-            <p class="hero__caption">Cada mapa nasce da posição real das estrelas.</p>
-          </div>
+            <figcaption>Cada mapa nasce da posição real das estrelas.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -124,15 +110,15 @@
 
         <div class="container gallery" aria-label="Possibilidades de composição">
           <article class="gallery-card gallery-card--forest reveal">
-            <div class="mini-art mini-art--light" aria-hidden="true"><span class="mini-art__stars">✦ · ✧ ·</span><span>O CÉU DE UM DIA</span><b>INESQUECÍVEL</b></div>
+            <img src="assets/images/colecao-mapas.png" alt="Coleção de mapas estelares AYORA em quadros claros e escuros nos formatos A5, A4 e A3" width="1402" height="1121" loading="lazy" />
             <div class="gallery-card__body"><p class="eyebrow eyebrow--light">MAPAS ESTELARES</p><h3>O instante, desenhado pelo céu.</h3><p>Uma leitura visual refinada para aniversários, encontros, chegadas e recomeços.</p></div>
           </article>
           <article class="gallery-card gallery-card--sand reveal">
-            <div class="mini-art mini-art--dark" aria-hidden="true"><span class="mini-art__stars">· ✦ · ✧</span><span>FEITO PARA</span><b>VOCÊ</b></div>
-            <div class="gallery-card__body"><p class="eyebrow">FORMATOS & MOLDURAS</p><h3>Presença em cada detalhe.</h3><p>Escolha entre formatos A5, A4, A3 e outras possibilidades para o seu ambiente.</p></div>
+            <img src="assets/images/duas-versoes.png" alt="Duas versões de um quadro personalizado AYORA, uma clara e outra escura" width="1600" height="1120" loading="lazy" />
+            <div class="gallery-card__body"><p class="eyebrow">FORMATOS & MOLDURAS</p><h3>Presença em cada detalhe.</h3><p>Escolha entre A5, A4, A3 e outros formatos, com molduras branca, preta ou em madeira natural, e acabamento em vidro ou acetato.</p></div>
           </article>
           <article class="gallery-card gallery-card--clay reveal">
-            <div class="mini-art mini-art--dark" aria-hidden="true"><span class="mini-art__stars">✦</span><span>PARA</span><b>SEMPRE</b></div>
+            <img src="assets/images/poster-ayora.png" alt="Arte AYORA com mapa estelar personalizado em uma composição delicada e contemporânea" width="1152" height="1792" loading="lazy" />
             <div class="gallery-card__body"><p class="eyebrow">EDIÇÕES ESPECIAIS</p><h3>Memórias que se expandem.</h3><p>Arte para família, viagens, pets e outros capítulos que merecem ganhar forma.</p></div>
           </article>
         </div>
@@ -140,6 +126,9 @@
 
       <section class="experience section section--green" aria-labelledby="experience-title">
         <div class="container experience__grid">
+          <figure class="experience__image reveal">
+            <img src="assets/images/experiencia-embalagem.png" alt="Embalagens, cartão personalizado e presente AYORA compondo a experiência de entrega" width="1600" height="1122" loading="lazy" />
+          </figure>
           <div class="experience__copy reveal">
             <p class="eyebrow eyebrow--gold">A EXPERIÊNCIA AYORA</p>
             <h2 id="experience-title">O presente começa antes de ser aberto.</h2>
@@ -159,7 +148,7 @@
             <p class="eyebrow">COMECE POR UMA MEMÓRIA</p>
             <h2 id="customizer-title">Qual instante você gostaria de eternizar?</h2>
             <p>Conte-nos o essencial. A partir dele, sua obra começa a tomar forma.</p>
-            <p class="form-note">Seus dados são usados apenas nesta prévia. Para receber pedidos no site, conecte o formulário ao seu canal de atendimento.</p>
+            <p class="form-note">Ao concluir, você será direcionado ao WhatsApp para seguir com o atendimento humano e finalizar sua personalização.</p>
           </div>
 
           <form class="memory-form reveal" data-memory-form novalidate>
@@ -174,7 +163,7 @@
             </div>
             <div class="field"><label for="memory-message">O que este momento representa? <span>(opcional)</span></label><textarea id="memory-message" name="memory-message" rows="3" placeholder="Uma pequena lembrança, um sentimento, uma dedicatória..."></textarea></div>
             <label class="checkbox"><input type="checkbox" required /><span>Li e concordo em compartilhar estas informações para iniciar minha personalização.</span></label>
-            <button class="button button--wide" type="submit">Criar minha prévia <span aria-hidden="true">↗</span></button>
+            <button class="button button--wide" type="submit">Continuar pelo WhatsApp <span aria-hidden="true">↗</span></button>
             <p class="form-feedback" data-form-feedback role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -186,7 +175,7 @@
           <div class="faq__items reveal">
             <details><summary>Como o mapa estelar é criado?</summary><p>Ele é desenvolvido a partir da posição real das estrelas na data, horário e localização que você indicar para a sua memória.</p></details>
             <details><summary>O mapa é relacionado à astrologia?</summary><p>Não. A AYORA usa o céu como registro visual de um instante, transformando informação astronômica em arte para memórias.</p></details>
-            <details><summary>Quais formatos estão disponíveis?</summary><p>As peças podem ser criadas em A5, A4, A3 e outros formatos, incluindo arte digital e edições especiais.</p></details>
+            <details><summary>Quais formatos e acabamentos estão disponíveis?</summary><p>As peças podem ser criadas em A5, A4, A3 e outros formatos, incluindo arte digital e edições especiais. Para emoldurar, há possibilidades em branco, preto e madeira natural, com vidro ou acetato.</p></details>
             <details><summary>Posso presentear alguém?</summary><p>Sim. A experiência foi pensada para presentear: a embalagem, o cartão personalizado e o certificado tornam a entrega ainda mais especial.</p></details>
             <details><summary>Onde encontro a AYORA?</summary><p>A AYORA é uma marca digital. As vendas acontecem pelo e-commerce próprio, WhatsApp e marketplaces parceiros.</p></details>
           </div>
@@ -206,9 +195,9 @@
 
     <footer class="site-footer">
       <div class="container footer__grid">
-        <div><a class="brand brand--footer" href="#inicio" aria-label="AYORA — voltar ao início"><span class="brand__mark" aria-hidden="true"><i></i></span><span class="brand__name">AYORA</span></a><p>Arte para memórias que merecem ficar.</p></div>
+        <div><a class="brand brand--footer" href="#inicio" aria-label="AYORA — voltar ao início"><img class="brand__logo" src="assets/logos/logo-principal.jpg" alt="" width="160" height="48" /></a><p>Arte para memórias que merecem ficar.</p></div>
         <nav aria-label="Navegação do rodapé"><a href="#historia">A essência</a><a href="#como-funciona">Como funciona</a><a href="#colecao">A coleção</a><a href="#personalizar">Personalizar</a></nav>
-        <div class="footer__seal"><img src="assets/logos/ayora-logo-light.jpg" alt="Logotipo AYORA — Arte para Memórias" width="260" height="260" loading="lazy" /></div>
+        <div class="footer__seal"><img src="assets/logos/submarca.jpg" alt="Símbolo e logotipo AYORA — Arte para Memórias" width="260" height="260" loading="lazy" /></div>
       </div>
       <div class="container footer__bottom"><span>© <span data-current-year></span> AYORA. Arte para Memórias.</span><a href="#inicio">Voltar ao início ↑</a></div>
     </footer>

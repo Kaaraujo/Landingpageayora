@@ -1,21 +1,27 @@
 # AYORA — Arte para Memórias
 
-Landing Page institucional para a AYORA, marca brasileira de Design Emocional que transforma a posição real das estrelas em obras personalizadas para preservar momentos especiais.
+Landing Page institucional da AYORA, marca brasileira de Design Emocional que transforma a posição real das estrelas de uma data, horário e localização em obras de arte personalizadas.
 
 ## Objetivo
 
-Apresentar a proposta de valor da marca de forma editorial, serena e sofisticada, conduzindo a pessoa visitante pela descoberta da marca até o início da personalização de uma peça.
+Apresentar a AYORA como uma marca premium de **Arte para Memórias**: uma experiência de design autoral, significado e cuidado que vai além da decoração. A página guia a pessoa visitante da descoberta da proposta até o início do atendimento via WhatsApp.
+
+## Descrição
+
+O layout foi desenvolvido do zero em uma linguagem editorial, minimalista e contemplativa. A narrativa usa espaço em branco, paleta natural, imagens de produto e uma sequência de leitura pensada para transmitir valor percebido antes da conversão.
+
+Todos os logotipos e o favicon fornecidos foram preservados como arquivos de imagem, sem redesenho ou alteração da marca.
 
 ## Tecnologias utilizadas
 
 - HTML5 semântico
-- CSS3 com design system, Grid e layout mobile-first
-- JavaScript Vanilla para menu responsivo, animações leves e validação do formulário
-- SVG para favicon
+- CSS3, com custom properties, Grid e abordagem mobile-first
+- JavaScript Vanilla
+- Imagens locais em PNG/JPG e favicon local
 
-Não há frameworks, bibliotecas externas ou processo de build. O projeto pode ser publicado diretamente no GitHub Pages.
+Não há frameworks, bibliotecas externas ou etapa de build. O projeto pode ser publicado diretamente no GitHub Pages.
 
-## Estrutura de pastas
+## Estrutura das pastas
 
 ```text
 /
@@ -27,67 +33,77 @@ Não há frameworks, bibliotecas externas ou processo de build. O projeto pode s
 │   └── script.js
 ├── assets/
 │   ├── images/
+│   │   ├── colecao-mapas.png
+│   │   ├── experiencia-embalagem.png
+│   │   ├── mapa-estelar-claro.png
+│   │   ├── duas-versoes.png
+│   │   └── poster-ayora.png
 │   ├── icons/
 │   ├── logos/
-│   │   ├── ayora-logo-dark.jpg
-│   │   ├── ayora-logo-gold.jpg
-│   │   ├── ayora-logo-light.jpg
-│   │   └── ayora-symbol.jpg
+│   │   ├── logo-principal.jpg
+│   │   ├── logo-secundario.jpg
+│   │   └── submarca.jpg
 │   └── fonts/
 └── favicon/
-    └── favicon.svg
+    └── favicon.jpg
 ```
+
+As demais variações de logotipo fornecidas também permanecem em `assets/logos/` para uso futuro.
 
 ## Funcionalidades
 
-- Navegação responsiva com menu acessível em telas pequenas.
-- CTAs internos que levam ao formulário de personalização.
-- Formulário com campos de data, horário, local e formato, incluindo validação nativa acessível.
-- FAQ com elementos HTML `details`/`summary`, compatíveis com teclado e leitores de tela.
-- Animações discretas condicionadas à preferência de movimento do sistema.
+- Navegação responsiva e acessível, com menu para telas pequenas.
+- CTAs distribuídos conforme a jornada de conversão.
+- Formulário de personalização com validação nativa.
+- Geração de mensagem preenchida para WhatsApp após o envio do formulário.
+- FAQ com elementos `details`/`summary`, compatíveis com teclado.
+- Animações discretas acionadas por viewport e respeitando `prefers-reduced-motion`.
 - Ano do rodapé atualizado automaticamente.
+- Favicon, metas SEO, Open Graph e Twitter Card.
 
 ## Estrutura da Landing Page
 
-1. Hero com proposta de valor e CTA.
-2. Manifesto da marca e conceito de Arte para Memórias.
-3. Processo de criação em três momentos.
-4. Possibilidades de formatos, molduras e edições especiais.
-5. Experiência AYORA e diferenciais de produção/entrega.
-6. Formulário para iniciar a personalização.
+1. Hero: proposta de valor e CTA principal.
+2. Essência: manifesto de Arte para Memórias.
+3. Como funciona: compartilhar, compor e receber.
+4. Coleção: formatos, molduras, arte digital e edições especiais.
+5. Experiência AYORA: produção, embalagem e detalhes do presente.
+6. Personalização: formulário para iniciar o pedido.
 7. Perguntas frequentes.
 8. CTA final e rodapé.
 
 ## Estratégia de UX
 
-A narrativa foi organizada na sequência “entender → imaginar → confiar → agir”. O layout usa espaço em branco, blocos curtos, uma hierarquia tipográfica editorial e CTA principal repetido em pontos naturais da jornada. Em dispositivos móveis, a navegação e os campos do formulário se reorganizam para uma única coluna.
+A página segue a sequência **descobrir → compreender → visualizar → confiar → personalizar**. Textos curtos, respiros visuais e CTAs em momentos naturais reduzem a carga cognitiva. No celular, o conteúdo e o formulário passam para uma coluna única e os alvos de toque mantêm área confortável.
 
 ## Estratégia de SEO
 
-- `title`, meta description, canonical e metas Open Graph/Twitter configurados no `index.html`.
-- Estrutura semântica com `header`, `main`, `section`, `nav`, `article`, `form` e `footer`.
-- Um único `h1` e títulos seguintes organizados por seção.
-- Imagens com texto alternativo e favicon otimizado em SVG.
-- Sem dependências externas e com JavaScript carregado com `defer`.
+- `title`, meta description, canonical e robots configurados.
+- Metadados Open Graph e Twitter Card para compartilhamento.
+- Estrutura semântica com `header`, `nav`, `main`, `section`, `article`, `figure`, `form` e `footer`.
+- Um único `h1` e hierarquia de headings por seção.
+- Textos alternativos descritivos nas imagens de conteúdo.
+- JavaScript com `defer`, carregamento tardio das imagens fora da primeira dobra e sem dependências de terceiros.
 
-Antes da publicação, atualize a URL canônica e a imagem Open Graph para URLs absolutas do domínio final.
+Antes de publicar em domínio próprio, substitua o valor relativo de `canonical` e `og:image` em `index.html` pelas URLs absolutas finais.
 
 ## Estratégia de conversão
 
-O texto evita pressão comercial e convida a pessoa a começar pela própria memória. O formulário fica após os diferenciais da experiência para reduzir insegurança, e o FAQ remove dúvidas comuns antes do CTA final.
+O site não usa linguagem agressiva: a conversão nasce da história que a pessoa deseja preservar. O formulário coleta somente os dados necessários para o primeiro contato e abre uma mensagem estruturada no WhatsApp, facilitando o atendimento humano e a finalização da compra.
 
 ## Acessibilidade
 
-- Link para pular direto ao conteúdo.
-- Contraste alto entre texto e fundos.
-- Navegação completa por teclado e foco visível.
-- Rótulos associados a todos os campos.
-- Mensagens de formulário anunciadas por `aria-live`.
-- Respeito a `prefers-reduced-motion`.
+- Link para pular diretamente ao conteúdo principal.
+- Contraste reforçado entre textos e planos de fundo.
+- Foco visível e navegação completa por teclado.
+- Labels associados a todos os campos do formulário.
+- Mensagens do formulário anunciadas com `aria-live`.
+- Menu com estado `aria-expanded`, fechamento por `Escape` e navegação por teclado.
+- Redução de animações para pessoas que ativarem essa preferência no sistema.
 
 ## Como executar localmente
 
-Como é um site estático, abra `index.html` no navegador ou sirva a pasta com qualquer servidor local. Por exemplo, se tiver Python instalado:
+Abra `index.html` diretamente no navegador ou sirva a pasta com um servidor local. Exemplo usando Python:
 
 ```bash
 python3 -m http.server 8080
@@ -95,55 +111,72 @@ python3 -m http.server 8080
 
 Depois, acesse `http://localhost:8080`.
 
+## Configurar o WhatsApp
+
+O número não foi incluído no briefing e, por isso, precisa ser informado antes da publicação:
+
+1. Abra `js/script.js`.
+2. Localize `const WHATSAPP_NUMBER = '';` no início do arquivo.
+3. Informe somente os dígitos com país e DDD. Exemplo: `5511999999999`.
+
+Ao enviar o formulário, a pessoa será direcionada ao WhatsApp com os dados da personalização já preenchidos. Sem essa configuração, o site mostra uma orientação em vez de encaminhar para um contato inexistente.
+
 ## Como publicar no GitHub Pages
 
-1. Crie um repositório no GitHub e envie estes arquivos para a branch `main`.
-2. No repositório, acesse **Settings → Pages**.
-3. Em **Build and deployment**, selecione **Deploy from a branch**.
-4. Escolha a branch `main`, a pasta `/(root)` e salve.
-5. Após a publicação, atualize `canonical`, `og:image` e qualquer link de canal de venda com a URL final.
+1. Crie um repositório no GitHub e envie o conteúdo desta pasta para a branch `main`.
+2. No repositório, abra **Settings → Pages**.
+3. Em **Build and deployment**, escolha **Deploy from a branch**.
+4. Selecione a branch `main` e a pasta `/(root)`.
+5. Salve e aguarde a URL de publicação.
+6. Atualize a URL canônica, a imagem Open Graph e o número de WhatsApp antes de divulgar o site.
 
 ## Como editar os textos
 
-Todos os textos estão em `index.html`. Procure a seção desejada pelo respectivo `id` (`#historia`, `#como-funciona`, `#colecao`, `#personalizar` ou `#perguntas`) e altere apenas o conteúdo dentro das tags.
+Todos os textos ficam em `index.html`. Cada área possui um `id` identificável, como `#historia`, `#como-funciona`, `#colecao`, `#personalizar` e `#perguntas`. Altere o texto dentro das tags preservando os títulos, `alt` das imagens e a hierarquia de headings.
 
 ## Como trocar imagens
 
-Coloque novas imagens em `assets/images/` ou `assets/logos/` e atualize o atributo `src` no `index.html`. Use arquivos WebP ou AVIF para fotografias de produção e inclua sempre uma descrição correta no atributo `alt`.
+1. Coloque a nova imagem em `assets/images/` ou uma marca em `assets/logos/`.
+2. Atualize o `src` correspondente no `index.html`.
+3. Ajuste `alt`, `width` e `height` quando aplicável.
+
+Para fotos novas, prefira WebP ou AVIF e uma dimensão próxima ao espaço exibido. Os arquivos de logo atuais devem permanecer sem edição para preservar a marca.
 
 ## Como alterar cores
 
-As cores estão centralizadas no início de `css/style.css`, dentro de `:root`. Os principais tokens são:
+As cores ficam centralizadas no começo de `css/style.css`, dentro de `:root`:
 
-- `--forest`: verde institucional
-- `--sand`: dourado areia
-- `--paper`: off white de fundo
-- `--clay`: tom terroso complementar
+- `--forest`: verde institucional (`#33423b`)
+- `--sand`: dourado de detalhes (`#be9763`)
+- `--paper`: off white de fundo (`#f1ebe4`)
+- `--ink` e `--muted`: cores de leitura
+
+Altere os tokens, não cada regra individual, para manter consistência no design system.
 
 ## Como alterar fontes
 
-As famílias tipográficas estão nos tokens `--serif` e `--sans` de `css/style.css`. Para usar fontes próprias, adicione os arquivos em `assets/fonts/`, declare-os com `@font-face` no começo do CSS e atualize esses tokens. Prefira `woff2` para melhor desempenho.
+As famílias estão centralizadas nos tokens `--serif` e `--sans` em `css/style.css`, preparados respectivamente para **Tropical Avenue Personal Use On Regular** e **Montserrat**.
+
+Para usar os arquivos licenciados da marca, adicione versões `.woff2` em `assets/fonts/`, declare-as com `@font-face` no topo de `style.css` e mantenha os nomes dos tokens. Enquanto elas não forem adicionadas, o site utiliza fontes de sistema semelhantes como fallback.
 
 ## Como adicionar novas seções
 
-1. Adicione uma nova `<section>` dentro de `<main>` em `index.html`.
-2. Inclua um `id` e um `h2` descritivos.
-3. Crie os estilos na área correspondente de `css/style.css`.
-4. Se ela precisar aparecer no menu, inclua um link para o novo `id` nas navegações de cabeçalho e rodapé.
-
-## Integração do formulário
-
-O formulário atual demonstra a jornada e valida os campos apenas no navegador; ele não envia informações para nenhum serviço. Para receber pedidos, conecte o evento de envio em `js/script.js` a um endpoint seguro, CRM, ferramenta de formulários ou fluxo de WhatsApp autorizado. Não coloque chaves secretas no JavaScript do site estático.
+1. Inclua uma nova `<section>` dentro de `<main>` em `index.html`.
+2. Dê um `id` único e um `h2` descritivo à seção.
+3. Adicione os estilos correspondentes em `css/style.css`.
+4. Inclua o novo link nas navegações, se ele fizer parte da jornada principal.
+5. Mantenha o padrão de espaçamento e os tokens de cor existentes.
 
 ## Melhorias futuras
 
-- Conectar o formulário ao e-commerce ou atendimento autorizado.
-- Integrar gerador de mapa estelar com dados astronômicos reais.
-- Incluir fotos reais de produtos e de unboxing em formatos otimizados.
-- Adicionar depoimentos reais, quando disponíveis, com autorização das pessoas clientes.
-- Configurar analytics, eventos de conversão e banner de cookies conforme a ferramenta escolhida.
-- Criar páginas de privacidade, trocas e termos da loja.
+- Integrar um gerador de mapa estelar baseado em dados astronômicos reais.
+- Conectar o formulário a CRM, e-commerce ou automação de atendimento autorizada.
+- Criar página de produto e fluxo de checkout próprio.
+- Incluir avaliações reais e autorizadas de clientes.
+- Adicionar páginas de privacidade, trocas, termos e política de cookies.
+- Converter as imagens de produto para WebP/AVIF quando a curadoria final for concluída.
+- Configurar analytics, Search Console e eventos de conversão.
 
 ## Licença
 
-Todos os direitos reservados à AYORA. Os ativos de marca e os conteúdos deste projeto não devem ser reutilizados sem autorização.
+Todos os direitos reservados à AYORA. O código, os conteúdos e principalmente os ativos de marca não devem ser reutilizados sem autorização.
